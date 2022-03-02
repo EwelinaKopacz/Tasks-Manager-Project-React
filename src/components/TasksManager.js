@@ -51,11 +51,31 @@ class TasksManager extends React.Component {
         })
     }
 
+    renderTasks(){
+        const {tasks} = this.state;
+        return tasks.map(item => {
+            return(
+                <>
+                <header>{item.name.toUpperCase()} 00:00:00</header>
+                <footer>
+                    <button>START/STOP</button>
+                    <button>FINISH</button>
+                    <button>REMOVE</button>
+                </footer>
+                </>
+            )
+        })
+    }
 
     render() {
         return (
             <section>
-                <h1 onClick={ this.onClick }>TasksManager</h1>
+                <h1 onClick={ this.onClick }>Tasks Manager</h1>
+                <section>
+                    <div>
+                        {this.renderTasks()}
+                    </div>
+                </section>
                 <h2>Add New Task:</h2>
                     <form onSubmit={this.submitHandler}>
                         <input name="task" onChange={this.changeHandler} value={this.state.task} />

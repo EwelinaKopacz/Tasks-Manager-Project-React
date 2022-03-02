@@ -17,7 +17,7 @@
       "id": 2
     },
     {
-      "name": "kup telefon",
+      "name": "kup chleb",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -25,12 +25,60 @@
       "id": 3
     },
     {
-      "name": "kup karte",
+      "name": "kup komputer",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
       "isRemove": "false",
       "id": 4
+    },
+    {
+      "name": "kup buty",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 5
+    },
+    {
+      "name": "kup chlebek",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 6
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 7
+    },
+    {
+      "name": "kup chleb",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 8
+    },
+    {
+      "name": "kup chleb",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 9
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 10
     }
   ]
 }
