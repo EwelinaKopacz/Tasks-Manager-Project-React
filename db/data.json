@@ -1,15 +1,15 @@
 {
   "data": [
     {
-      "id": 1,
-      "name": "Create React App",
-      "time": "0",
+      "name": "salads",
+      "time": 0,
       "isRunning": "false",
       "isDone": "false",
-      "isRemoved": "false"
+      "isRemove": "false",
+      "id": 1
     },
     {
-      "name": "kup dom",
+      "name": "asd",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -17,7 +17,7 @@
       "id": 2
     },
     {
-      "name": "kup chleb",
+      "name": "m",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -25,7 +25,7 @@
       "id": 3
     },
     {
-      "name": "kup komputer",
+      "name": "as",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -33,7 +33,7 @@
       "id": 4
     },
     {
-      "name": "kup buty",
+      "name": "sd",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -41,7 +41,7 @@
       "id": 5
     },
     {
-      "name": "kup chlebek",
+      "name": "sa",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -49,7 +49,7 @@
       "id": 6
     },
     {
-      "name": "kup dom",
+      "name": "s",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -57,7 +57,7 @@
       "id": 7
     },
     {
-      "name": "kup chleb",
+      "name": "s",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -65,7 +65,7 @@
       "id": 8
     },
     {
-      "name": "kup chleb",
+      "name": "sad",
       "time": 0,
       "isRunning": "false",
       "isDone": "false",
@@ -79,6 +79,30 @@
       "isDone": "false",
       "isRemove": "false",
       "id": 10
+    },
+    {
+      "name": "kup chleb",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 11
+    },
+    {
+      "name": "domek",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 12
+    },
+    {
+      "name": "dupa",
+      "time": 0,
+      "isRunning": "false",
+      "isDone": "false",
+      "isRemove": "false",
+      "id": 13
     }
   ]
 }

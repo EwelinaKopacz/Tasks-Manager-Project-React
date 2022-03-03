@@ -2,7 +2,16 @@ import React from 'react';
 
 class TasksManager extends React.Component {
     state = {
-        tasks: [],
+        tasks: [
+            {
+            name: "salads",
+            time: 0,
+            isRunning: "false",
+            isDone: "false",
+            isRemove: "false",
+            id: 1
+            }
+        ],
     }
 
     onClick = () => {
@@ -41,13 +50,8 @@ class TasksManager extends React.Component {
     }
 
     addTaskToState(data){
-        const{name,id} = data;
-        const newTask = {
-            name:name,
-            id:id,
-        }
         this.setState({
-            tasks:[...this.state.tasks,newTask]
+            tasks:[...this.state.tasks,data]
         })
     }
 
@@ -55,30 +59,55 @@ class TasksManager extends React.Component {
         const {tasks} = this.state;
         return tasks.map(item => {
             return(
-                <>
-                <header>{item.name.toUpperCase()} 00:00:00</header>
-                <footer>
-                    <button>START/STOP</button>
-                    <button>FINISH</button>
-                    <button>REMOVE</button>
-                </footer>
-                </>
+                <div>
+                    <header >{item.name.toUpperCase()}</header>
+                    <div>Czas wykonania: {item.time} s.</div>
+                    <footer>
+                        <button onClick={this.timeHandler(item)}>{!item.isRunning ? 'START' : 'STOP'}</button>
+                        <button>FINISH</button>
+                        <button disabled="true">REMOVE</button>
+                    </footer>
+                </div>
             )
-        })
+        });
     }
+
+    timeHandler = item =>{
+        console.log(item.id);
+        this.idTimer = setInterval(() => {
+            this.incrementTime(item.id);
+          },1000);
+    }
+
+    incrementTime(id) {
+        this.setState(state => {
+            const newTasks = state.tasks.map(task => {
+                if(task.id === id) {
+                    return {...task, time: task.time + 1}
+                }
+                return task;
+            });
+            return {
+                tasks: newTasks,
+            }
+        });
+    }
+
+    // stopTimer = item => {
+    //     clearInterval(this.idTimer);
+    // }
+
 
     render() {
         return (
             <section>
                 <h1 onClick={ this.onClick }>Tasks Manager</h1>
                 <section>
-                    <div>
-                        {this.renderTasks()}
-                    </div>
+                    {this.renderTasks()}
                 </section>
                 <h2>Add New Task:</h2>
                     <form onSubmit={this.submitHandler}>
-                        <input name="task" onChange={this.changeHandler} value={this.state.task} />
+                        <input name="task" onChange={this.changeHandler} value={this.state.task} placeholder='Write new task' />
                         <input type="submit" value="ADD"/>
                     </form>
             </section>
