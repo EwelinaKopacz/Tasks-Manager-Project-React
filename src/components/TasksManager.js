@@ -48,19 +48,20 @@ class TasksManager extends React.Component {
 
     renderTasks(){
         const {tasks} = this.state;
-        const newList = tasks.filter(task => task.isRemove === false)
+        const filterList = tasks.filter(task => task.isRemove === false);
+        const sorterList = filterList.sort((a,b) => a.isDone - b.isDone);
 
-        return  newList.map(item => {
+        return  sorterList.map(item => {
             return(
                 <div>
                     <header >{item.name.toUpperCase()}</header>
                     <div>Czas wykonania: {item.time} s.</div>
                     <footer>
                         {/* <button onClick={() => this.clickStartStop(item)}>{item.isRunning ? 'STOP' : 'START'}</button> */}
-                        <button onClick={() => this.timeHandlerStart(item.id)}>START</button>
-                        <button onClick={() => this.timeHandlerStop(item.id)}>STOP</button>
-                        <button onClick={() => this.finishTaskHandler(item.id)}>{item.isDone ? 'COMPLETED' : 'FINISH'}</button>
-                        <button onClick={() => this.deleteTaskHandler(item.id)} disabled={this.setDisabledStatus(item)}>REMOVE</button>
+                        <button onClick={() => this.startHandler(item.id)}>START</button>
+                        <button onClick={() => this.stopHandler(item.id)}>STOP</button>
+                        <button onClick={() => this.finishHandler(item.id)}>{item.isDone ? 'COMPLETED' : 'FINISH'}</button>
+                        <button onClick={() => this.deleteHandler(item.id)} disabled={this.disabledStatusDelete(item)}>REMOVE</button>
                     </footer>
                 </div>
             )
@@ -72,7 +73,7 @@ class TasksManager extends React.Component {
     //     item.isRunning ? this.timeHandlerStart(item.id) : this.timeHandlerStop(item.id);
     // }
 
-    timeHandlerStart = id =>{
+    startHandler = id =>{
         console.log(id);
         this.idTimer = setInterval(() => {
             this.incrementTime(id);
@@ -93,7 +94,7 @@ class TasksManager extends React.Component {
         });
     }
 
-    timeHandlerStop = id => {
+    stopHandler = id => {
         clearInterval(this.idTimer);
 
         this.setState((prevState) => ({
@@ -106,7 +107,7 @@ class TasksManager extends React.Component {
         }))
     }
 
-    finishTaskHandler = id => {
+    finishHandler = id => {
         clearInterval(this.idTimer);
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {
@@ -117,12 +118,8 @@ class TasksManager extends React.Component {
             })
         }))
     }
-    
-    setDisabledStatus = item => {
-        return item.isDone ? false : true;
-    }
 
-    deleteTaskHandler = id => {
+    deleteHandler = id => {
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {
                 if(task.id === id) {
@@ -131,6 +128,10 @@ class TasksManager extends React.Component {
                 return task;
             })
         }))
+    }
+
+    disabledStatusDelete = item => {
+        return item.isDone ? false : true;
     }
 
     render() {

@@ -9,7 +9,7 @@
       "id": 1
     },
     {
-      "name": "kup dom",
+      "name": "kup chleb",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -17,7 +17,7 @@
       "id": 2
     },
     {
-      "name": "kup dom",
+      "name": "adasd",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -25,7 +25,7 @@
       "id": 3
     },
     {
-      "name": "kup chleb",
+      "name": "kup dom",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -41,7 +41,7 @@
       "id": 5
     },
     {
-      "name": "kup chleb",
+      "name": "kup dom",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -81,7 +81,7 @@
       "id": 10
     },
     {
-      "name": "kup chleb",
+      "name": "dupa",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -89,7 +89,7 @@
       "id": 11
     },
     {
-      "name": "kup dom",
+      "name": "dupa",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -97,7 +97,7 @@
       "id": 12
     },
     {
-      "name": "domek",
+      "name": "kup dom",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -105,7 +105,7 @@
       "id": 13
     },
     {
-      "name": "kup chleb",
+      "name": "kup dom",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -121,7 +121,7 @@
       "id": 15
     },
     {
-      "name": "domek",
+      "name": "kup komputer",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -129,7 +129,7 @@
       "id": 16
     },
     {
-      "name": "dupa",
+      "name": "kup okulary",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -137,7 +137,7 @@
       "id": 17
     },
     {
-      "name": "kup dom",
+      "name": "kup wiadro",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -145,84 +145,12 @@
       "id": 18
     },
     {
-      "name": "kup dom",
+      "name": "kup piwo",
       "time": 0,
       "isRunning": false,
       "isDone": false,
       "isRemove": false,
       "id": 19
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 20
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 21
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 22
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 23
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 24
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 25
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 26
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 27
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 28
     }
   ]
 }
