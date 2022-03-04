@@ -1,108 +1,228 @@
 {
   "data": [
     {
-      "name": "salads",
+      "name": "kup dom",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 1
     },
     {
-      "name": "asd",
+      "name": "kup dom",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 2
     },
     {
-      "name": "m",
+      "name": "kup dom",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 3
     },
     {
-      "name": "as",
+      "name": "kup chleb",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 4
     },
     {
-      "name": "sd",
+      "name": "kup dom",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 5
     },
     {
-      "name": "sa",
+      "name": "kup chleb",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 6
     },
     {
-      "name": "s",
+      "name": "kup dom",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 7
     },
     {
-      "name": "s",
+      "name": "kup dom",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 8
     },
     {
-      "name": "sad",
+      "name": "kup dom",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 9
     },
     {
       "name": "kup dom",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 10
     },
     {
       "name": "kup chleb",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
       "id": 11
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 12
     },
     {
       "name": "domek",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
-      "id": 12
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 13
+    },
+    {
+      "name": "kup chleb",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 14
+    },
+    {
+      "name": "kup chleb",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 15
+    },
+    {
+      "name": "domek",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 16
     },
     {
       "name": "dupa",
       "time": 0,
-      "isRunning": "false",
-      "isDone": "false",
-      "isRemove": "false",
-      "id": 13
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 17
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 18
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 19
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 20
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 21
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 22
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 23
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 24
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 25
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 26
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 27
+    },
+    {
+      "name": "kup dom",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemove": false,
+      "id": 28
     }
   ]
 }
