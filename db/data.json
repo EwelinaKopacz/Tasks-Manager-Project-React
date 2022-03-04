@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "name": "kup dom",
+      "name": "BUY BEER",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -9,7 +9,7 @@
       "id": 1
     },
     {
-      "name": "kup chleb",
+      "name": "buy WINE",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -17,7 +17,7 @@
       "id": 2
     },
     {
-      "name": "adasd",
+      "name": "KILL PUTIN",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -25,132 +25,12 @@
       "id": 3
     },
     {
-      "name": "kup dom",
+      "name": "STOP WAR",
       "time": 0,
       "isRunning": false,
       "isDone": false,
       "isRemove": false,
       "id": 4
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 5
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 6
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 7
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 8
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 9
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 10
-    },
-    {
-      "name": "dupa",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 11
-    },
-    {
-      "name": "dupa",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 12
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 13
-    },
-    {
-      "name": "kup dom",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 14
-    },
-    {
-      "name": "kup chleb",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 15
-    },
-    {
-      "name": "kup komputer",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 16
-    },
-    {
-      "name": "kup okulary",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 17
-    },
-    {
-      "name": "kup wiadro",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 18
-    },
-    {
-      "name": "kup piwo",
-      "time": 0,
-      "isRunning": false,
-      "isDone": false,
-      "isRemove": false,
-      "id": 19
     }
   ]
 }

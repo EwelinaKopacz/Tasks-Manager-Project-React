@@ -5,6 +5,18 @@ class TasksManager extends React.Component {
         tasks: [],
     }
 
+    async componentDidMount(){
+        const url = 'http://localhost:3005/data';
+        try{
+            const response = await fetch(`${url}`);
+            const tasks = await response.json();
+            this.setState({tasks})
+        }
+        catch(error){
+            console.error(error.message);
+        }
+    }
+
     onClick = () => {
         const { tasks } = this.state;
         console.log( tasks)
@@ -70,7 +82,7 @@ class TasksManager extends React.Component {
     // NIE CHCE DZIAŁAĆ: WYSWIETLA SIE START, 1 KLIK - WYSWIETLA SIE STOP - 2 KLIK DOPIERO ZLICZA I NIE ZATRZYMUJE SIE NA STOP
     // clickStartStop = item => {
     //     const {isRunning} = item;
-    //     item.isRunning ? this.timeHandlerStart(item.id) : this.timeHandlerStop(item.id);
+    //     isRunning ? this.startHandler(item.id) : this.stopHandler(item.id);
     // }
 
     startHandler = id =>{
@@ -84,7 +96,9 @@ class TasksManager extends React.Component {
         this.setState(state => {
             const newTasks = state.tasks.map(task => {
                 if(task.id === id) {
-                    return {...task, time: task.time + 1, isRunning: true}
+                    const data = {...task, time: task.time + 1, isRunning: true};
+                    this.updateData(data);
+                    return data;
                 }
                 return task;
             });
@@ -100,7 +114,9 @@ class TasksManager extends React.Component {
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {
                 if(task.id === id){
-                    return {...task,isRunning:!task.isRunning}
+                    const data = {...task,isRunning:!task.isRunning};
+                    this.updateData(data);
+                    return data;
                 }
                 return task;
             })
@@ -112,7 +128,9 @@ class TasksManager extends React.Component {
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {
                 if((task.id === id) || ((task.isRunning))){
-                    return {...task,isDone:!task.isDone,isRunning:false}
+                    const data = {...task,isDone:!task.isDone,isRunning:false};
+                    this.updateData(data);
+                    return data;
                 }
                 return task;
             })
@@ -123,7 +141,9 @@ class TasksManager extends React.Component {
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {
                 if(task.id === id) {
-                    return {...task,isRemove:!task.isRemove}
+                    const data = {...task,isRemove:!task.isRemove};
+                    this.updateData(data);
+                    return data
                 }
                 return task;
             })
@@ -132,6 +152,19 @@ class TasksManager extends React.Component {
 
     disabledStatusDelete = item => {
         return item.isDone ? false : true;
+    }
+
+    updateData = data => {
+        const{id} = data;
+        const requestOptions = {
+            method:'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }
+        fetch(`http://localhost:3005/data/${id}`,requestOptions)
+            .then(response => {return response.json()})
+            .then(data => console.log(data))
+            .catch(error => console.error(error))
     }
 
     render() {
@@ -148,6 +181,10 @@ class TasksManager extends React.Component {
                     </form>
             </section>
         )
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.idTimer);
     }
 }
 
