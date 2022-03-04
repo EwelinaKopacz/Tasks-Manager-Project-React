@@ -1,12 +1,12 @@
 body {
-    background: #dcdcdc;
+    background: white;
     box-sizing: border-box;
 }
 
 .tasks__container {
     min-height: 90vh;
     padding: 20px 0;
-    background-color: aliceblue;
+    background-color: #CFD8DC;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -16,7 +16,7 @@ body {
 .task__box {
     min-height: 50px;
     min-width: 60vwpx;
-    background-color: silver;
+    background-color: #FFCC80;
     margin: 15px 0;
     padding:10px 15px;
 }
@@ -58,5 +58,10 @@ body {
     height: 50px;
     width: 250px;
     margin: 10px 10px;
+}
+
+.task__button {
+    background-color: #FB8C00;
+    color:white;
 }
 
