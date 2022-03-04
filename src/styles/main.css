@@ -1,3 +1,62 @@
 body {
     background: #dcdcdc;
+    box-sizing: border-box;
 }
+
+.tasks__container {
+    min-height: 90vh;
+    padding: 20px 0;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.task__box {
+    min-height: 50px;
+    min-width: 60vwpx;
+    background-color: silver;
+    margin: 15px 0;
+    padding:10px 15px;
+}
+
+.tasks__buttons {
+    min-width: 100px;
+    margin: 5px 5px;
+    padding: 7px 7px;
+    border: none;
+}
+
+.tasks__header {
+    font-size: 28px;
+    border-bottom: 1px solid black;
+}
+
+.task__options {
+    padding:5px 0;
+}
+
+.task__data {
+    padding:5px 0;
+}
+
+.task__name {
+    padding: 3px 0;
+    font-size:18px;
+    font-weight: 600;
+}
+
+.task__form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.task__input,.task__button {
+    border: none;
+    height: 50px;
+    width: 250px;
+    margin: 10px 10px;
+}
+

@@ -65,15 +65,17 @@ class TasksManager extends React.Component {
 
         return  sorterList.map(item => {
             return(
-                <div>
-                    <header >{item.name.toUpperCase()}</header>
-                    <div>Czas wykonania: {item.time} s.</div>
-                    <footer>
+                <div className='task__box'>
+                    <div className='task__data'>
+                        <header className='task__name' >{item.name.toUpperCase()}</header>
+                        <span>Czas wykonania: {item.time} s.</span>
+                    </div>
+                    <footer className='task__options'>
                         {/* <button onClick={() => this.clickStartStop(item)}>{item.isRunning ? 'STOP' : 'START'}</button> */}
-                        <button onClick={() => this.startHandler(item.id)}>START</button>
-                        <button onClick={() => this.stopHandler(item.id)}>STOP</button>
-                        <button onClick={() => this.finishHandler(item.id)}>{item.isDone ? 'COMPLETED' : 'FINISH'}</button>
-                        <button onClick={() => this.deleteHandler(item.id)} disabled={this.disabledStatusDelete(item)}>REMOVE</button>
+                        <button className='tasks__buttons' onClick={() => this.startHandler(item.id)}>START</button>
+                        <button className='tasks__buttons' onClick={() => this.stopHandler(item.id)}>STOP</button>
+                        <button className='tasks__buttons' onClick={() => this.finishHandler(item.id)}>{item.isDone ? 'COMPLETED' : 'FINISH'}</button>
+                        <button className='tasks__buttons' onClick={() => this.deleteHandler(item.id)} disabled={this.disabledStatusDelete(item)}>REMOVE</button>
                     </footer>
                 </div>
             )
@@ -169,16 +171,18 @@ class TasksManager extends React.Component {
 
     render() {
         return (
-            <section>
-                <h1 onClick={ this.onClick }>Tasks Manager</h1>
+            <section className='tasks__container'>
                 <section>
-                    {this.renderTasks()}
+                    <h1 className='tasks__header' onClick={ this.onClick }>Tasks Manager</h1>
+                        {this.renderTasks()}
                 </section>
-                <h2>Add New Task:</h2>
-                    <form onSubmit={this.submitHandler}>
-                        <input name="task" onChange={this.changeHandler} value={this.state.task} placeholder='Write new task' />
-                        <input type="submit" value="ADD"/>
-                    </form>
+                <section>
+                    <h2>Add New Task:</h2>
+                        <form className='task__form'onSubmit={this.submitHandler}>
+                            <input className='task__input' name="task" onChange={this.changeHandler} value={this.state.task} placeholder='Write new task' />
+                            <input className='task__button' type="submit" value="ADD"/>
+                        </form>
+                </section>
             </section>
         )
     }

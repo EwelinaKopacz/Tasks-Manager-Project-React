@@ -2,7 +2,7 @@
   "data": [
     {
       "name": "BUY BEER",
-      "time": 0,
+      "time": 20,
       "isRunning": false,
       "isDone": false,
       "isRemove": false,
@@ -31,6 +31,14 @@
       "isDone": false,
       "isRemove": false,
       "id": 4
+    },
+    {
+      "name": "WRITE TO MUM",
+      "time": 3,
+      "isRunning": false,
+      "isDone": true,
+      "isRemove": true,
+      "id": 5
     }
   ]
 }
