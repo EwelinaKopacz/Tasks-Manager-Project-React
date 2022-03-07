@@ -1,15 +1,15 @@
 {
   "data": [
     {
-      "name": "BUY BEER",
-      "time": 20,
+      "name": "BUY HOME",
+      "time": 5,
       "isRunning": false,
       "isDone": false,
       "isRemove": false,
       "id": 1
     },
     {
-      "name": "buy WINE",
+      "name": "BUY TEA",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -17,23 +17,23 @@
       "id": 2
     },
     {
-      "name": "KILL PUTIN",
-      "time": 0,
+      "name": "WRITE TO MUM",
+      "time": 4,
       "isRunning": false,
-      "isDone": false,
+      "isDone": true,
       "isRemove": false,
       "id": 3
     },
     {
-      "name": "STOP WAR",
+      "name": "Write to Dad",
       "time": 0,
       "isRunning": false,
-      "isDone": false,
+      "isDone": true,
       "isRemove": false,
       "id": 4
     },
     {
-      "name": "WRITE TO MUM",
+      "name": "DO BREAKFAST",
       "time": 3,
       "isRunning": false,
       "isDone": true,

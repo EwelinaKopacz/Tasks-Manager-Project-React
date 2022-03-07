@@ -65,3 +65,32 @@ body {
     color:white;
 }
 
+.button__startstop {
+    background-color: #5D4037;
+    color:white;
+    min-width: 100px;
+    margin: 5px 5px;
+    padding: 7px 7px;
+    border: none;
+}
+
+.button__startstop:hover {
+    background-color: #494342;
+    color:white;
+}
+
+.button__finish{
+    background-color: #388E3C;
+    color: white;
+    min-width: 100px;
+    margin: 5px 5px;
+    padding: 7px 7px;
+    border: none;
+}
+
+.button__remove:hover {
+    background-color: #D84315;
+    color: white;
+
+}
+

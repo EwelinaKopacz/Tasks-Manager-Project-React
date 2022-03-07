@@ -1,14 +1,18 @@
 import React from 'react';
 
 class TasksManager extends React.Component {
+    constructor(props){
+        super(props);
+        this.api = `http://localhost:3005/data`;
+        this.idTimer = null;
+    }
     state = {
         tasks: [],
     }
 
     async componentDidMount(){
-        const url = 'http://localhost:3005/data';
         try{
-            const response = await fetch(`${url}`);
+            const response = await fetch(`${this.api}`);
             const tasks = await response.json();
             this.setState({tasks})
         }
@@ -39,7 +43,7 @@ class TasksManager extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name:task,time:0,isRunning:false,isDone:false,isRemove:false })
         }
-        fetch('http://localhost:3005/data',requestOptions)
+        fetch(this.api,requestOptions)
             .then(response => {return response.json()})
             .then(data => this.addTaskToState(data))
             .catch(error => console.error(error))
@@ -71,27 +75,31 @@ class TasksManager extends React.Component {
                         <span>Czas wykonania: {item.time} s.</span>
                     </div>
                     <footer className='task__options'>
-                        {/* <button onClick={() => this.clickStartStop(item)}>{item.isRunning ? 'STOP' : 'START'}</button> */}
-                        <button className='tasks__buttons' onClick={() => this.startHandler(item.id)}>START</button>
-                        <button className='tasks__buttons' onClick={() => this.stopHandler(item.id)}>STOP</button>
-                        <button className='tasks__buttons' onClick={() => this.finishHandler(item.id)}>{item.isDone ? 'COMPLETED' : 'FINISH'}</button>
-                        <button className='tasks__buttons' onClick={() => this.deleteHandler(item.id)} disabled={this.disabledStatusDelete(item)}>REMOVE</button>
+                        <button className='tasks__buttons button__startstop' onClick={() => this.startStopHandler(item)}>{item.isRunning ? 'STOP' : 'START'}</button>
+                        <button className='tasks__buttons' onClick={() => this.finishHandler(item.id)} className={item.isDone ? 'button__finish' : 'tasks__buttons'}>{item.isDone ? 'COMPLETED' : 'FINISH'}</button>
+                        <button className='tasks__buttons button__remove' onClick={() => this.deleteHandler(item.id)} disabled={this.disabledStatusDelete(item)}>REMOVE</button>
                     </footer>
                 </div>
             )
         });
     }
-    // NIE CHCE DZIAŁAĆ: WYSWIETLA SIE START, 1 KLIK - WYSWIETLA SIE STOP - 2 KLIK DOPIERO ZLICZA I NIE ZATRZYMUJE SIE NA STOP
-    // clickStartStop = item => {
-    //     const {isRunning} = item;
-    //     isRunning ? this.startHandler(item.id) : this.stopHandler(item.id);
-    // }
 
-    startHandler = id =>{
-        console.log(id);
-        this.idTimer = setInterval(() => {
-            this.incrementTime(id);
-          },1000);
+    startStopHandler = item => {
+        const {isRunning} = item;
+        isRunning ? this.stopHandler(item.id) : this.startHandler(item.id);
+    }
+
+    startHandler = id => {
+        console.log(`ID taska to: ${id}`);
+        if(!this.idTimer){
+            this.idTimer = setInterval(() => {
+                this.incrementTime(id);
+            },1000);
+        }
+        else{
+            alert('Only one task at the same time.')
+        }
+
     }
 
     incrementTime (id) {
@@ -111,7 +119,10 @@ class TasksManager extends React.Component {
     }
 
     stopHandler = id => {
+        console.log(this.idTimer);
         clearInterval(this.idTimer);
+        this.idTimer = null;
+        console.log(this.idTimer);
 
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {
@@ -127,6 +138,7 @@ class TasksManager extends React.Component {
 
     finishHandler = id => {
         clearInterval(this.idTimer);
+        this.idTimer = null;
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {
                 if((task.id === id) || ((task.isRunning))){
@@ -142,7 +154,7 @@ class TasksManager extends React.Component {
     deleteHandler = id => {
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {
-                if(task.id === id) {
+                if((task.id === id) && (this.confirmRemoveTask())) {
                     const data = {...task,isRemove:!task.isRemove};
                     this.updateData(data);
                     return data
@@ -150,6 +162,13 @@ class TasksManager extends React.Component {
                 return task;
             })
         }))
+    }
+
+    confirmRemoveTask = () => {
+        if(confirm('Are you sure you want to remove this task?')){
+            return true;
+        }
+        return false
     }
 
     disabledStatusDelete = item => {
@@ -163,9 +182,8 @@ class TasksManager extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         }
-        fetch(`http://localhost:3005/data/${id}`,requestOptions)
+        fetch(`${this.api}/${id}`,requestOptions)
             .then(response => {return response.json()})
-            .then(data => console.log(data))
             .catch(error => console.error(error))
     }
 
