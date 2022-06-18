@@ -90,7 +90,6 @@ class TasksManager extends React.Component {
     }
 
     startHandler = id => {
-        console.log(`ID taska to: ${id}`);
         if(!this.idTimer){
             this.idTimer = setInterval(() => {
                 this.incrementTime(id);
@@ -119,10 +118,8 @@ class TasksManager extends React.Component {
     }
 
     stopHandler = id => {
-        console.log(this.idTimer);
         clearInterval(this.idTimer);
         this.idTimer = null;
-        console.log(this.idTimer);
 
         this.setState((prevState) => ({
             tasks: prevState.tasks.map(task => {

@@ -2,9 +2,9 @@
   "data": [
     {
       "name": "BUY HOME",
-      "time": 5,
+      "time": 13,
       "isRunning": false,
-      "isDone": false,
+      "isDone": true,
       "isRemove": false,
       "id": 1
     },
@@ -39,6 +39,22 @@
       "isDone": true,
       "isRemove": true,
       "id": 5
+    },
+    {
+      "name": "Call baby",
+      "time": 6,
+      "isRunning": false,
+      "isDone": true,
+      "isRemove": true,
+      "id": 6
+    },
+    {
+      "name": "132",
+      "time": 0,
+      "isRunning": false,
+      "isDone": true,
+      "isRemove": true,
+      "id": 7
     }
   ]
 }
