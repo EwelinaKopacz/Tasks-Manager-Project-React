@@ -1,7 +1,7 @@
 # Tasks Manager Project - React
 
 ## About the project:
-The aim of the project was to create application "Tasks Manager", user can add new task and measure time to finish it.
+The aim of the project was to create application "Tasks Manager", which allows a user to add new task and to measure time to finish it.
 
 Features:
 * user can add a new task by form
@@ -9,7 +9,7 @@ Features:
 * user can stop the time using button "STOP" or "FINISH"
 * only "COMPLETED" task can be removed
 * "COMPLETED" task is move to the end the list
-* "REMOVED" task is not showing but is in the state still
+* "REMOVED" task is not showing but is still in the state
 * every change in task like: time (start, stop), finish, remove is save in API
 
 When working on it I used JSON server as my local API.
@@ -27,12 +27,12 @@ Please, refer to the screenshots, which are attached below. Moreover, I am worki
 * Desktop only version
 
 ## Solutions
-By creating this project I had an opportunity to practice/learn:
-* what is it "Lifecycle of Components" and what is important
+When creating this project I had an opportunity to practice/learn:
+* the "Lifecycle of Components" 
 * how and when to use lifecycle methods
 * how to work with state, how to update values using this.setState method
 * how to use events in React
-* why we need to bind event handlers in class and how to ommit it using plugin using babel transpilator
+* why we need to bind event handlers in class and how to ommit it by using plugin and babel transpilator
 * controlled vs. uncontrolled components in React
 * conditional rendering 
 
@@ -57,7 +57,7 @@ startStopHandler = item => {
     }
 ```
 
-Taking data from inputs and update the state
+Taking data from inputs and updating the state
 ```
 changeHandler = e => {
         const {name,value} = e.target;
@@ -69,9 +69,9 @@ changeHandler = e => {
 <input className='task__input' name="task" onChange={this.changeHandler} value={this.state.task} placeholder='Write new task' />
 ```
 
-Working on this project I have tried to split the code into a small function (Single-responsibility principle).
+While working on this project I have tried to split the code into a small function (Single-responsibility principle).
 
-I didn't have more time to work on appearance of application, but in a free time I am going to upgrade this. Right now, you can check my other projects where I focused on design and practiced CSS3.
+I didn't have enough time to work on appearance of the application, but I will upgrade it later on. Right now, I can provide my other projects where I focused more on design and practiced CSS3.
 * [LandingPage-HTML-CSS](https://github.com/EwelinaKopacz/LandingPage-HTML-CSS)
 * [LandingPage-RWD](https://github.com/EwelinaKopacz/LandingPage-RWD)
 * [LandingPage-CuDanusie](https://github.com/EwelinaKopacz/LandingPage-CuDanusie)
