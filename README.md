@@ -1,6 +1,16 @@
 # Tasks Manager Project - React
 
-## About the project:
+## Table of Contents
+1. [About the project](#about-the-project)
+2. [How to see it](#how-to-see-it)
+3. [Technologies](#technologies)
+4. [Solutions](#solutions)
+5. [Project preview](#project-preview)
+6. [Contact](#feel-free-to-contact-me)
+7. [Sources](#sources)
+8. [Thanks](#thanks-for-project-and-support-to-Mateusz-Bogolubow)
+
+## About the project
 The aim of the project was to create application "Tasks Manager", which allows a user to add new task and to measure time to finish it.
 
 Features:
